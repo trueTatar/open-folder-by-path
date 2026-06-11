@@ -2,7 +2,7 @@
   "name": "open-folder-by-path",
   "displayName": "Open Folder by Path",
   "description": "Open a local folder by typing its path",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "trueTatar",
   "license": "SEE LICENSE IN LICENSE",
   "engines": {
@@ -11,7 +11,12 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "extensionKind": [
+    "ui"
+  ],
+  "activationEvents": [
+    "*"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -25,6 +30,11 @@
       }
     ],
     "keybindings": [
+      {
+        "command": "open-folder-by-path.openFolder",
+        "key": "shift+alt+o d",
+        "when": "!remoteName"
+      },
       {
         "command": "open-folder-by-path.completeActiveFolder",
         "key": "tab",
